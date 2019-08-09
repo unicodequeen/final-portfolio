@@ -229,6 +229,13 @@
     }
 
 /* -------------------- Image Hover Styles -------------------- */
+.section-one img {
+  padding-bottom:0px;
+}
+
+ .section-two img {
+  padding-bottom:0px;
+}
   
    /* Image Text Hover Effect style */
    .hvrbox {
