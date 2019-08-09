@@ -1,0 +1,1123 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* ==========================================================================
+     Browser Upgrade Prompt
+     ========================================================================== */
+  
+  .browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+  }
+  
+  /* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+  
+  /* -------------------- General Styles -------------------- */
+   
+  html {
+    font-size: 16px;
+  }
+   
+  body {
+    background-color: #fafafa;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    line-height:30px;
+    text-align: left;
+  }
+  
+  
+  .container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-flow:row wrap;
+  }
+  
+  .main-image img {
+      width: 100%;
+      padding-bottom: 30px;
+  }
+
+  a {
+    color:#00BAC7;
+  }
+
+  
+  /* -------------------- Base Header - Footer Styles -------------------- */
+  
+  header h1 {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight:600;
+  }
+  
+  header h2 {
+    display:none;
+  }
+  
+  header {
+      width: 100%;
+  }
+  
+  /* -------------------- Nav Bar Styles  -------------------- */
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .navbar {
+    font-size: 18px;
+    background-color: transparent;
+    padding-bottom: 10px;
+  }
+  
+  .main-nav {
+    list-style-type: none;
+  }
+
+  .logo{
+    font-weight:600;
+  }
+
+  .nav-links,
+  .logo {
+    text-decoration: none;
+    color: #333333;
+  }
+  
+  .main-nav li {
+    text-align: center;
+    margin: 15px auto;
+  }
+  
+  .logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  
+  .logo span {
+    display:none;
+  }
+  
+  .navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: #333333;
+    font-size: 22px;
+  }
+
+    /* I have hidden the menu so that it’s not visible by default */
+  
+    .main-nav {
+      list-style-type: none;
+      display: none;
+    }
+    
+    .active {
+      display: block;
+    }
+
+/* -------------------- Footer Styles  -------------------- */
+  
+    footer h4 {
+      font-size: 10px;
+      font-weight:400;
+    }
+  
+    footer {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+/* -------------------- Image Hover Styles -------------------- */
+  
+   /* Image Text Hover Effect style */
+   .hvrbox {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .hvrbox:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height:50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+
+/* ==========================================================================
+   Baja Fresh Page - Mobile Styles
+   ========================================================================== */
+   
+   .content-wrapper{
+    max-width:1000px;
+    width:90%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-flow:row wrap;
+  }
+  
+  
+  .content-wrapper h2,h3,p {
+    padding: 20px 0;
+  }
+  
+  h3{
+    font-weight:500;
+  }
+
+  #lofi{
+    width:100%;
+  }
+  
+  section .content-wrapper {
+     
+    width:100%; 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-bottom: 20px;
+  }
+  
+  input[type=button] {
+    width: 300px;
+    padding: 20px 5px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background-color: #00bac7;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+/* ==========================================================================
+   City Cycles - Mobile Styles
+   ========================================================================== */
+   #bullet-group-1,#bullet-group-2 {
+    margin:0 20px;
+  }
+  
+  #bullet-group-2 {
+    margin:0 0 0 40px;
+    padding-right:20px
+  }
+
+  .solution li{
+    padding-bottom: 10px;
+  }
+
+  .hi-fi-images img {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-flow:row wrap;
+    width:100%;
+    margin-bottom:50px;
+}
+
+/* ==========================================================================
+   About Page - Mobile Styles
+   ========================================================================== */
+   .about h1{
+    text-align:center;
+  }
+  
+  .about p{
+    font-size:1.25em;
+    line-height:40px;
+  }
+
+
+/* ==========================================================================
+   Contact Page - Mobile Styles
+   ========================================================================== */
+
+  /*---------- header area--------------*/
+
+  #contact-header h2{
+    font-weight:400;
+  }
+
+  #contact-header{
+    width:100%;
+  }
+      
+   /*---------------------------------------------*/
+   input {
+    outline: none;
+    border: none;
+  }
+  
+  textarea {
+    outline: none;
+    border: none;
+  }
+  
+  textarea:focus, input:focus {
+    border-color: transparent !important;
+  }
+  
+  input:focus::-webkit-input-placeholder { color:transparent; }
+  input:focus:-moz-placeholder { color:transparent; }
+  input:focus::-moz-placeholder { color:transparent; }
+  input:focus:-ms-input-placeholder { color:transparent; }
+  
+  textarea:focus::-webkit-input-placeholder { color:transparent; }
+  textarea:focus:-moz-placeholder { color:transparent; }
+  textarea:focus::-moz-placeholder { color:transparent; }
+  textarea:focus:-ms-input-placeholder { color:transparent; }
+  
+  input::-webkit-input-placeholder { color: #999999; }
+  input:-moz-placeholder { color: #999999; }
+  input::-moz-placeholder { color: #999999; }
+  input:-ms-input-placeholder { color: #999999; }
+  
+  textarea::-webkit-input-placeholder { color: #999999; }
+  textarea:-moz-placeholder { color: #999999; }
+  textarea::-moz-placeholder { color: #999999; }
+  textarea:-ms-input-placeholder { color: #999999; }
+  
+  /*---------------------------------------------*/
+  button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  iframe {
+    border: none !important;
+  }
+  
+  
+  
+  
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ Contact 2 ]*/
+     .container-contact2 {
+      width: 100%;  
+      min-height: 100vh;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      background: rgb(0,186,199);
+      background: -webkit-linear-gradient(45deg, rgb(0,170,181), rgb(115,217,224));
+      background: -o-linear-gradient(45deg, rgb(0,170,181), rgb(115,217,224));
+      background: -moz-linear-gradient(45deg, rgb(0,170,181), rgb(115,217,224));
+      background: linear-gradient(45deg, rgb(0,170,181), rgb(115,217,224));
+    }
+    
+    .wrap-contact2 {
+      width: 790px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 72px 55px 90px 55px;
+    }
+    
+    
+    /*------------------------------------------------------------------
+    [  ]*/
+    
+    .contact2-form {
+      width: 100%;
+    }
+    
+    .contact2-form-title {
+      display: block;
+      font-family: Montserrat;
+      font-weight:700;
+      font-size: 39px;
+      color: #333333;
+      line-height: 1.2;
+      text-align: center;
+      padding-bottom: 90px;
+    }
+    
+    
+    
+    /*------------------------------------------------------------------
+    [  ]*/
+    
+    .wrap-input2 {
+      width: 100%;
+      position: relative;
+      border-bottom: 2px solid #adadad;
+      margin-bottom: 37px;
+    }
+    
+    .input2 {
+      display: block;
+      width: 100%;
+      font-family: Montserrat;
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.2;
+    }
+    
+    .focus-input2 {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    
+    .focus-input2::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+    
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+    
+      background: rgb(0,186,199);
+      background: -webkit-linear-gradient(45deg, #00AAB5, #73D9E0);
+      background: -o-linear-gradient(45deg, #00AAB5, #73D9E0);
+      background: -moz-linear-gradient(45deg, #00AAB5, #73D9E0);
+      background: linear-gradient(45deg, #00AAB5, #73D9E0);
+    }
+    
+    .focus-input2::after {
+      content: attr(data-placeholder);
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0;
+    
+      font-family: Montserrat;
+      font-size: 13px;
+      color: #999999;
+      line-height: 1.2;
+    
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+    
+    /*---------------------------------------------*/
+    input.input2 {
+      height: 45px;
+    }
+    
+    input.input2 + .focus-input2::after {
+      top: 16px;
+      left: 0;
+    }
+    
+    textarea.input2 {
+      min-height: 115px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+    
+    textarea.input2 + .focus-input2::after {
+      top: 16px;
+      left: 0;
+    }
+    
+    .input2:focus + .focus-input2::after {
+      top: -13px;
+    }
+    
+    .input2:focus + .focus-input2::before {
+      width: 100%;
+    }
+    
+    .has-val.input2 + .focus-input2::after {
+      top: -13px;
+    }
+    
+    .has-val.input2 + .focus-input2::before {
+      width: 100%;
+    }
+    
+    /*------------------------------------------------------------------
+    [ Button ]*/
+    .container-contact2-form-btn {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 13px;
+    }
+    
+    .wrap-contact2-form-btn {
+      display: block;
+      position: relative;
+      z-index: 1;
+      border-radius: 2px;
+      width: auto;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    
+    .contact2-form-bgbtn {
+      position: absolute;
+      z-index: -1;
+      width: 300%;
+      height: 100%;
+      background: rgb(0,186,199);
+      background: -webkit-linear-gradient(-135deg, #00AAB5, #73D9E0, #00AAB5, #73D9E0);
+      background: -o-linear-gradient(-135deg, #00AAB5, #73D9E0, #00AAB5, #73D9E0);
+      background: -moz-linear-gradient(-135deg, #00AAB5, #73D9E0, #00AAB5, #73D9E0);
+      background: linear-gradient(-135deg, #00AAB5, #73D9E0, #00AAB5, #73D9E0);
+      top: 0;
+      left: -100%;
+    
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+    
+    .contact2-form-btn {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      min-width: 244px;
+      height: 50px;
+    
+     
+    
+      font-family: Montserrat;
+      font-weight:600;
+      font-size: 16px;
+      color: #fff;
+      line-height: 1.2;
+      
+    
+    }
+    
+    .wrap-contact2-form-btn:hover .contact2-form-bgbtn {
+      left: 0;
+    }
+    
+    /*------------------------------------------------------------------
+    [ Responsive ]*/
+    
+    @media (max-width: 576px) {
+      .wrap-contact2 {
+        padding: 72px 15px 90px 15px;
+      }
+    }
+    
+    
+    
+    /*------------------------------------------------------------------
+    [ Alert validate ]*/
+    
+    .validate-input {
+      position: relative;
+    }
+    
+    .alert-validate::before {
+      content: attr(data-validate);
+      position: absolute;
+      max-width: 70%;
+      background-color: white;
+      border: 1px solid #c80000;
+      border-radius: 2px;
+      padding: 4px 25px 4px 10px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 0px;
+      pointer-events: none;
+    
+      font-family: Poppins-Regular;
+      color: #c80000;
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: left;
+    
+      visibility: hidden;
+      opacity: 0;
+    
+      -webkit-transition: opacity 0.4s;
+      -o-transition: opacity 0.4s;
+      -moz-transition: opacity 0.4s;
+      transition: opacity 0.4s;
+    }
+    
+    .alert-validate::after {
+      content: "\f12a";
+      font-family: FontAwesome;
+      display: block;
+      position: absolute;
+      color: #c80000;
+      font-size: 16px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 8px;
+    }
+    
+    .alert-validate:hover:before {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    @media (max-width: 992px) {
+      .alert-validate::before {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+     
+  
+  /* ==========================================================================
+     Helper classes
+     ========================================================================== */
+  
+  /*
+   * Hide visually and from screen readers
+   */
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  /*
+  * Hide only visually, but have it available for screen readers:
+  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  *
+  * 1. For long content, line feeds are not interpreted as spaces and small width
+  *    causes content to wrap 1 word per line:
+  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+  */
+  
+  .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+  
+  /*
+  * Extends the .sr-only class to allow the element
+  * to be focusable when navigated to via the keyboard:
+  * https://www.drupal.org/node/897638
+  */
+  
+  .sr-only.focusable:active,
+  .sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+  
+  /*
+  * Hide visually and from screen readers, but maintain layout
+  */
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  /*
+  * Clearfix: contain floats
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    `contenteditable` attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that receive the `clearfix` class.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
+  
+  .clearfix:before,
+  .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  
+  .clearfix:after {
+    clear: both;
+  }
+  
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+   
+   /* ==========================================================================
+   Baja Fresh Page - Tablet Styles
+   ========================================================================== */
+     @media screen and (min-width: 768px) {
+      
+      /*Baja Fresh*/
+
+      .text {
+        color: white;
+        font-size: 40px;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+     }
+
+    
+     @media screen and (min-width: 1024px) {
+
+      /*Baja Fresh*/
+
+      .top-section  {
+        display:flex;
+        width:100%;
+        height:100%;
+      }
+
+      .section-one img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1400px;
+        height: 500px;
+        padding-bottom:0px;
+      }
+
+       .section-two img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        height: 500px;
+        padding-bottom:0px;
+      }
+
+       .bottom-section img{ 
+        max-width: 100%;
+        max-height:100%;
+      }
+
+       .text {
+        color: white;
+        font-size: 35px;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .logo span {
+        display:block;
+        font-size:16px;
+        font-weight:400;
+        color:silver;
+   
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 100%;
+        width:100%;
+        align-items: center;
+      }
+    
+      .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    
+      .main-nav li {
+        margin: 0;
+      }
+    
+      .nav-links {
+        margin-left: 40px;
+      }
+    
+       .logo {
+        display: inline-block;
+        font-size: 22px;
+        padding-top: 24px;
+        padding-bottom: 10px;
+        margin-left: 20px;
+      }
+    
+      .navbar-toggle {
+        display: none;
+      }
+    
+      .logo:hover,
+      .nav-links:hover {
+        color: #d3d3d3;
+      }
+
+      footer h4 {
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+
+     /* ==========================================================================
+   Baja Fresh Page - Desktop Styles
+   ========================================================================== */
+        
+    @media screen and (min-width: 1200px) {
+     
+      /*Baja Fresh*/
+
+      div .content-wrapper{
+        width:80%;
+        padding: 0;
+      }
+ 
+      section .content-wrapper {
+        margin:0 90px;
+ 
+      }
+ 
+     }
+
+    @media screen and (min-width: 1440px) {
+      /*Baja Fresh*/
+      .top-section  {
+        display:flex;
+        width:100%;
+        height:100%;
+      }
+
+      .section-one img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1400px;
+        height: 800px;
+      }
+
+       .section-two img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        height:800px;
+      }
+
+       .bottom-section img{ 
+        max-width: 100%;
+        max-height:100%;
+      }
+    }
+
+    @media screen and (min-width: 2560px) {
+      /*Baja Fresh*/
+      .top-section  {
+        display:flex;
+        width:100%;
+        height:100%;
+      }
+
+      .section-one img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        height: 1334px;
+      }
+
+       .section-two img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1600px;
+        height:1334px;
+      }
+
+       .bottom-section img{ 
+        max-width: 100%;
+        max-height:1650px;
+      }
+
+       .text {
+        color: white;
+        font-size: 68px;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+  
+  
+  @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+  
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  
+  @media print {
+    *,
+    *:before,
+    *:after {
+      background: transparent !important;
+      color: #000 !important;
+      /* Black prints faster */
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+    /*
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+      content: "";
+    }
+    pre {
+      white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+    /*
+       * Printing Tables:
+       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
+    thead {
+      display: table-header-group;
+    }
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
+  
+  /*Closing CSS - Testing*/
+  /*Closing CSS - Testing 2*/
+  /*Closing CSS - Testing 3*/
