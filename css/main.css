@@ -872,7 +872,7 @@
         justify-content: center;
         align-items: center;
         max-width: 1400px;
-        height: 500px;
+        height: 100%;
         padding-bottom:0px;
       }
 
@@ -881,7 +881,7 @@
         justify-content: center;
         align-items: center;
         max-width: 1000px;
-        height: 500px;
+        height: 100%;
         padding-bottom:0px;
       }
 
@@ -991,7 +991,7 @@
         justify-content: center;
         align-items: center;
         max-width: 1400px;
-        height: 800px;
+        height: 100%;
       }
 
        .section-two img {
@@ -999,7 +999,7 @@
         justify-content: center;
         align-items: center;
         max-width: 1000px;
-        height:800px;
+        height:100%;
       }
 
        .bottom-section img{ 
@@ -1021,7 +1021,7 @@
         justify-content: center;
         align-items: center;
         max-width: 100%;
-        height: 1334px;
+        height: 100%;
       }
 
        .section-two img {
@@ -1029,7 +1029,7 @@
         justify-content: center;
         align-items: center;
         max-width: 1600px;
-        height:1334px;
+        height:100%;
       }
 
        .bottom-section img{ 
